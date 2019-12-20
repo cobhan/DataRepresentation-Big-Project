@@ -16,7 +16,7 @@ class AccessoriesDAO:
             
     def create(self, values):
         cursor = self.db.cursor()
-        sql="insert into car (make,model,price) values (%s,%s,%s)"
+        sql="insert into accessories (make,model,price) values (%s,%s,%s)"
         cursor.execute(sql, values)
 
         self.db.commit()
@@ -24,7 +24,7 @@ class AccessoriesDAO:
 
     def getAll(self):
         cursor = self.db.cursor()
-        sql="select * from car"
+        sql="select * from accessories"
         cursor.execute(sql)
         results = cursor.fetchall()
         returnArray = []
@@ -37,7 +37,7 @@ class AccessoriesDAO:
 
     def findByID(self, id):
         cursor = self.db.cursor()
-        sql="select * from car where id = %s"
+        sql="select * from accessories where id = %s"
         values = (id,)
 
         cursor.execute(sql, values)
@@ -46,12 +46,12 @@ class AccessoriesDAO:
 
     def update(self, values):
         cursor = self.db.cursor()
-        sql="update car set make= %s,model=%s, price=%s  where id = %s"
+        sql="update accessories set make= %s,model=%s, price=%s  where id = %s"
         cursor.execute(sql, values)
         self.db.commit()
     def delete(self, id):
         cursor = self.db.cursor()
-        sql="delete from car where id = %s"
+        sql="delete from accessories where id = %s"
         values = (id,)
 
         cursor.execute(sql, values)

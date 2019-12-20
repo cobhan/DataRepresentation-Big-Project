@@ -8,5 +8,5 @@ db = mysql.connector.connect(
 )
 
 cursor = db.cursor()
-sql="CREATE DATABASE phil"
+sql="CREATE DATABASE datarepresentation"
 cursor.execute(sql)
