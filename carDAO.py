@@ -1,14 +1,14 @@
 import mysql.connector
+import dbconfig as cfg
 class CarDAO:
     db=""
     def __init__(self): 
         self.db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Liscannor10",
-        #user="datarep",  # this is the user name on my mac
-        #passwd="password" # for my mac
-        database="datarepresentation"
+        host=cfg.mysql['host'],
+        user=cfg.mysql['user'],
+        password=cfg.mysql['password'],
+        #user="root", password blank
+        database=cfg.mysql['database']
         )
     
             

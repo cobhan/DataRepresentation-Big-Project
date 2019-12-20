@@ -2,11 +2,15 @@ import mysql.connector
 import dbconfig as cfg
 
 class AccessoriesDAO:
-db = mysql.connector.connect(
-	host=cfg.mysql['host'],
-	username=cfg.mysql['username'],
-	password=cfg.mysql['password'],
-	database=cfg.mysql['database']    
+    db=""
+    def __init__(self): 
+        self.db = mysql.connector.connect(
+        host=cfg.mysql['host'],
+        user=cfg.mysql['user'],
+        password=cfg.mysql['password'],
+        #user="root", password blank
+        database=cfg.mysql['database']
+        )   
 
     
             
