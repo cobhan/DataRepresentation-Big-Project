@@ -62,10 +62,12 @@ def logout():
 
 #app route for interlinking within the site
 @app.route('/carviewer')
+@login_required
 def carviewer():
     return render_template('carviewer.html')
 
 @app.route('/accessories')
+@login_required
 def accessories():
     return render_template('accessories.html')    
 

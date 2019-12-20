@@ -13,6 +13,7 @@ sql="CREATE TABLE accessories (id INT AUTO_INCREMENT PRIMARY KEY, type VARCHAR(2
 
 cursor.execute(sql)
 
+#could not get 2 databases working so replaced accessories with a quick img gallery
 
 
 
